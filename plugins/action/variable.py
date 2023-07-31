@@ -49,7 +49,7 @@ class ActionModule(ActionBase):
         elif state == 'append':
             if type(old_value) != list:
                 result['failed'] = True
-                result['msg'] = 'Variable %s is not a list' % (name)
+                result['message'] = 'Variable %s is not a list' % (name)
                 return result
 
             if self._play_context.check_mode == False:
